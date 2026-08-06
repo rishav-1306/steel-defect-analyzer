@@ -1,4 +1,4 @@
-# 🏭 DefectForge AI: Steel Defect Analyzer
+# DefectForge AI: Steel Defect Analyzer
 
 [![Python 3.8+](https://img.shields.io/badge/Python-3.8%2B-blue.svg?logo=python&logoColor=white)](https://www.python.org/)
 [![PyTorch](https://img.shields.io/badge/PyTorch-2.0%2B-EE4C2C.svg?logo=pytorch&logoColor=white)](https://pytorch.org/)
@@ -11,30 +11,30 @@ An end-to-end Computer Vision and Deep Learning system designed to automate surf
 
 ---
 
-## 📌 Table of Contents
+## Table of Contents
 
-- [Overview](#-overview)
-- [Key Features](#-key-features)
-- [Defect Taxonomy & Severity Matrix](#-defect-taxonomy--severity-matrix)
-- [Model Architecture](#-model-architecture)
-- [Performance & Results](#-performance--results)
-- [Web Dashboard UI](#-web-dashboard-ui)
-- [Repository Structure](#-repository-structure)
-- [Getting Started](#-getting-started)
+- [Overview](#overview)
+- [Key Features](#key-features)
+- [Defect Taxonomy & Severity Matrix](#defect-taxonomy--severity-matrix)
+- [Model Architecture](#model-architecture)
+- [Performance & Results](#performance--results)
+- [Web Dashboard UI](#web-dashboard-ui)
+- [Repository Structure](#repository-structure)
+- [Getting Started](#getting-started)
   - [Prerequisites](#prerequisites)
   - [Installation](#installation)
-- [Usage](#-usage)
+- [Usage](#usage)
   - [1. Launch Web Application](#1-launch-web-application)
   - [2. Train Model](#2-train-model)
   - [3. Evaluate Model](#3-evaluate-model)
   - [4. Predict via CLI](#4-predict-via-cli)
-- [Future Enhancements](#-future-enhancements)
-- [Project Context & Acknowledgments](#-project-context--acknowledgments)
-- [License](#-license)
+- [Future Enhancements](#future-enhancements)
+- [Project Context & Acknowledgments](#project-context--acknowledgments)
+- [License](#license)
 
 ---
 
-## 📸 Overview
+## Overview
 
 In industrial steel rolling processes, surface quality directly impacts structural integrity and material reliability. Traditional manual quality control is labor-intensive, subject to observer fatigue, and prone to classification errors.
 
@@ -42,17 +42,17 @@ In industrial steel rolling processes, surface quality directly impacts structur
 
 ---
 
-## ✨ Key Features
+## Key Features
 
-- 🎯 **Multi-Class Classification**: Identifies 6 distinct hot-rolled steel surface defect categories.
-- 🛡️ **Confidence Safeguard**: Implements a 70% confidence threshold to filter ambiguous samples or non-steel surfaces.
-- ⚠️ **Severity Risk Rating**: Categorizes detected defects into **Low**, **Medium**, or **High** severity levels for rapid quality triage.
-- 📊 **Interactive Streamlit UI**: Multi-page dashboard featuring real-time image analysis, per-class accuracy metrics, interactive Plotly charts, and defect reference cards.
-- ⚙️ **Modular & Scalable**: Clean separation between data pipelines (`dataset.py`), model architecture (`model.py`), training loops (`train.py`), evaluation (`evaluate.py`), and deployment (`app.py`).
+- **Multi-Class Classification**: Identifies 6 distinct hot-rolled steel surface defect categories.
+- **Confidence Safeguard**: Implements a 70% confidence threshold to filter ambiguous samples or non-steel surfaces.
+- **Severity Risk Rating**: Categorizes detected defects into **Low**, **Medium**, or **High** severity levels for rapid quality triage.
+- **Interactive Streamlit UI**: Multi-page dashboard featuring real-time image analysis, per-class accuracy metrics, interactive Plotly charts, and defect reference cards.
+- **Modular & Scalable**: Clean separation between data pipelines (`dataset.py`), model architecture (`model.py`), training loops (`train.py`), evaluation (`evaluate.py`), and deployment (`app.py`).
 
 ---
 
-## 🔬 Defect Taxonomy & Severity Matrix
+## Defect Taxonomy & Severity Matrix
 
 The model classifies defects based on the **NEU-DET Surface Defect Database**:
 
@@ -67,7 +67,7 @@ The model classifies defects based on the **NEU-DET Surface Defect Database**:
 
 ---
 
-## 🧠 Model Architecture
+## Model Architecture
 
 The core classifier is **SteelCNN**, a custom PyTorch Convolutional Neural Network optimized for single-channel and RGB industrial surface images resized to $224 \times 224$:
 
@@ -93,7 +93,7 @@ Input Image (3 x 224 x 224)
 
 ---
 
-## 📈 Performance & Results
+## Performance & Results
 
 Tested on **360 validation images** from the NEU-DET benchmark dataset:
 
@@ -118,18 +118,18 @@ Tested on **360 validation images** from the NEU-DET benchmark dataset:
 
 ---
 
-## 💻 Web Dashboard UI
+## Web Dashboard UI
 
 The application UI is built with **Streamlit** and customized with CSS styled in **JetBrains Mono** for an industrial terminal aesthetic. Key pages include:
 
-1. 📊 **Dashboard**: High-level KPIs, overall accuracy metrics, per-class horizontal bar chart, distribution donut chart, and defect class reference cards.
-2. 🔍 **Analyze Defect**: Image uploader with real-time inference, confidence breakdown, probability distribution graph, severity rating, and low-confidence warning system.
-3. 📉 **Model Performance**: Evaluation overview and per-class performance stats.
-4. ℹ️ **About**: Project information, dataset details, and architecture specifications.
+1. **Dashboard**: High-level KPIs, overall accuracy metrics, per-class horizontal bar chart, distribution donut chart, and defect class reference cards.
+2. **Analyze Defect**: Image uploader with real-time inference, confidence breakdown, probability distribution graph, severity rating, and low-confidence warning system.
+3. **Model Performance**: Evaluation overview and per-class performance stats.
+4. **About**: Project information, dataset details, and architecture specifications.
 
 ---
 
-## 📁 Repository Structure
+## Repository Structure
 
 ```
 steel-defect-analyzer/
@@ -161,7 +161,7 @@ steel-defect-analyzer/
 
 ---
 
-## 🛠️ Getting Started
+## Getting Started
 
 ### Prerequisites
 
@@ -195,7 +195,7 @@ steel-defect-analyzer/
 
 ---
 
-## 🚀 Usage
+## Usage
 
 ### 1. Launch Web Application
 
@@ -235,7 +235,7 @@ python src/predict.py --image path/to/steel_sample.jpg
 
 ---
 
-## 🔮 Future Enhancements
+## Future Enhancements
 
 - [ ] **Transfer Learning**: Evaluate deeper architectures (e.g., ResNet-50, EfficientNet-B0) to improve challenging classes like *Inclusion*.
 - [ ] **Defect Localization**: Implement bounding-box object detection (YOLOv8 / Faster R-CNN) or segmentation (U-Net) to pinpoint defect coordinates on large steel plates.
@@ -244,7 +244,7 @@ python src/predict.py --image path/to/steel_sample.jpg
 
 ---
 
-## 👨‍💻 Project Context & Acknowledgments
+## Project Context & Acknowledgments
 
 This project was developed as part of an industrial internship:
 
@@ -254,6 +254,6 @@ This project was developed as part of an industrial internship:
 
 ---
 
-## 📄 License
+## License
 
 Distributed under the MIT License. See `LICENSE` for details.
